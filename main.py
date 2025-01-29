@@ -1,8 +1,16 @@
 from datetime import datetime, timezone
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+app.middleware(
+  CORSMiddleware,
+  allow_origins=['*'],
+  allow_methods=["*"],  # Limit to necessary HTTP methods
+  allow_headers=["Authorization", "Content-Type"],
+  allow_credentials=True,
+)
 
 class ApiResponse(BaseModel):
   email: str
