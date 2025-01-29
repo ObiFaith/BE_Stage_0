@@ -20,7 +20,7 @@ class ApiResponse(BaseModel):
 @app.get('/', response_model=ApiResponse)
 def index():
   utc_data_time = datetime.now(timezone.utc)
-  iso_utc_date_time = utc_data_time.isoformat()
+  iso_utc_date_time = utc_data_time.isoformat(timespec='seconds').replace("+00:00", "Z")
 
   return ApiResponse(
     email="obifth@gmail.com",
