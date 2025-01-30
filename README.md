@@ -60,7 +60,7 @@ The response will return a JSON object with the following structure:
 
 ## Backlinks
 
-For additional information and job opportunities for developers in various languages, visit the following links:
+For additional information and job opportunities for developers, visit:
 
 - [Python Developers](https://hng.tech/hire/python-developers)
 
